@@ -129,7 +129,7 @@ class portThread(threading.Thread):
 							except:
 								pass
 						else:
-							if self.portInfo.netServer == True:
+							if self.port.portInfo.netServer == True:
 								try:
 									data = self.port.TCPHandle.recv(4096)
 								except:
@@ -149,8 +149,8 @@ class portThread(threading.Thread):
 						if self.port.portInfo.infilterUsed == False:
 							#If port isn't using a filter, write data
 							for p in self.stream.streamPorts:
-								if p.portInfo.portName == self.portInfo.Name:
-									if self.portInfo.echo == True:
+								if p.portInfo.portName == self.port.portInfo.portName:
+									if self.port.portInfo.echo == True:
 										p.portDataQueue.put(data)
 								else:
 									p.portDataQueue.put(data)

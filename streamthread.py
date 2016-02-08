@@ -46,6 +46,7 @@ class streamThread(threading.Thread):
 									if o.portInfo.portIO == "Output" or o.portInfo.portIO == "Input and Output":
 										#Depending on how the port is configured, either writes the data or filters it then writes
 										if o.portInfo.outfilterUsed == False:
+											print "Sending to output"
 											o.write(data)
 										else:
 											if o.portInfo.outfilterWhitelist == True:

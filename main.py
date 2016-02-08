@@ -71,7 +71,7 @@ class wn_system_tray():
 
 			#Running unity desktop environment, so use AppIndicator for system tray
 
-			self.tray = appindicator.Indicator("Port Router", 'logo.png', appindicator.CATEGORY_APPLICATION_STATUS)
+			self.tray = appindicator.Indicator("Port Router", '/home/george/Downloads/BRO11239330_CMP3060M/logo.png', appindicator.CATEGORY_APPLICATION_STATUS)
 			self.tray.set_status(appindicator.STATUS_ACTIVE)
 
 			self.cb_show_menu(None, None, None)
